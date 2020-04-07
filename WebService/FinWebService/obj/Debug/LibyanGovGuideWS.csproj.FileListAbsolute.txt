@@ -1,0 +1,6 @@
+E:\LibyanGovGuide\WebService\FinWebService\bin\LibyanGovGuideWS.dll
+E:\LibyanGovGuide\WebService\FinWebService\bin\LibyanGovGuideWS.pdb
+E:\LibyanGovGuide\WebService\FinWebService\bin\Newtonsoft.Json.dll
+E:\LibyanGovGuide\WebService\FinWebService\bin\Newtonsoft.Json.xml
+E:\LibyanGovGuide\WebService\FinWebService\obj\Debug\LibyanGovGuideWS.dll
+E:\LibyanGovGuide\WebService\FinWebService\obj\Debug\LibyanGovGuideWS.pdb

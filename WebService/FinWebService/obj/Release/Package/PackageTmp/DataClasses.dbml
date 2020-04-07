@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LibyanGovGuideDB" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=41.208.71.78;Initial Catalog=LibyanGovGuideDB;Persist Security Info=True;User ID=DBUser2" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LibyanGovGuideDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.T_Procedure" Member="T_Procedures">
+    <Type Name="T_Procedure">
+      <Column Name="ProcedureID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProcedureName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Classification" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="ActivityStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="T_Procedure_T_ProcedureDetail" Member="T_ProcedureDetails" ThisKey="ProcedureID" OtherKey="ProcedureID" Type="T_ProcedureDetail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_ProcedureDetail" Member="T_ProcedureDetails">
+    <Type Name="T_ProcedureDetail">
+      <Column Name="DetailID" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ProcedureID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Association Name="T_Procedure_T_ProcedureDetail" Member="T_Procedure" ThisKey="ProcedureID" OtherKey="ProcedureID" Type="T_Procedure" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.T_Classifcation" Member="T_Classifcations">
+    <Type Name="T_Classifcation">
+      <Column Name="ClassifcationID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ClassificationName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ActivityStatus" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
